@@ -25,7 +25,7 @@ this.authService.login(this.email, this.password).subscribe(
 () => {
 console.log('Login successful');
 // Navigate to home page or redirect to previous URL
-this.router.navigate(['/home']);
+this.router.navigate(['/movies']);
 },
 (error) => {
 console.error(error);
