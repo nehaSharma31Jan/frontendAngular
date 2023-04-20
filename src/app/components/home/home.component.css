@@ -1,0 +1,35 @@
+/* Center the welcome section */
+.welcome-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+}
+
+/* Style the featured movies section */
+.featured-section {
+  padding: 50px 0;
+}
+
+.movie-card {
+  height: 100%;
+}
+
+/* Style the movie card image */
+.movie-card .card-img-top {
+  height: 300px;
+  object-fit: cover;
+}
+
+/* Style the movie card title and description */
+.movie-card .card-title,
+.movie-card .card-text {
+  height: 60px;
+  overflow: hidden;
+}
+
+/* Center the movie card button */
+.movie-card .btn-primary {
+  display: block;
+  margin: 0 auto;
+}

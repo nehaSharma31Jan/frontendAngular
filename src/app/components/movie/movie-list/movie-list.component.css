@@ -1,0 +1,30 @@
+.card {
+  border: none;
+  transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  .card:hover {
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .btn-outline-dark {
+  border-color: #343a40;
+  color: #343a40;
+  }
+  
+  .btn-outline-dark:hover {
+  background-color: #343a40;
+  color: #fff;
+  }
+  
+  .container{
+    margin-bottom: 100px;
+  }
+  .ngx-slider{
+    width: fit-content;
+    height: fit-content;
+  }
+  
+  
+  
+  

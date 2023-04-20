@@ -1,0 +1,52 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar styles */
+.navbar {
+  font-size: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-item:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, 0.7);
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* Active and focused state */
+.nav-link:focus,
+.nav-link.active {
+  color: #ffffff;
+  outline: none;
+}
+
+/* Responsive styles */
+@media (max-width: 991.98px) {
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .nav-item:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+}

@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <img [src]="movie?.poster" alt="{{ movie?.name }}" width="250" height="400" />
+    </div>
+    <div class="col-md-8">
+      <h1>{{ movie?.name }}</h1>
+      <p>{{ movie?.description }}</p>
+      <h3>Showtimes:</h3>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Seats Available</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let showtime of movie?.showtimes">
+            <td>{{ showtime.date }}</td>
+            <td>{{ showtime.time }}</td>
+            <td>{{ countSeatsAvailable(showtime) }}</td>
+            <td>
+              <a *ngIf="countSeatsAvailable(showtime) > 0" [routerLink]="['/book', movie?._id]" queryParamsHandling="merge">
+                Book
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
+
+

@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" routerLink="/">MovieApp</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item" *ngIf="authService.isAuthenticated()">
+          <a class="nav-link" routerLink="/movies">Movies</a>
+        </li>
+        <li class="nav-item" *ngIf="authService.isAuthenticated()">
+          <a class="nav-link" routerLink="/create">Create Movie</a>
+        </li>
+        <li class="nav-item" *ngIf="authService.isAuthenticated()">
+          <a class="nav-link" routerLink="/update/:id">Update Movie</a>
+        </li>
+        <li class="nav-item" *ngIf="authService.isAuthenticated()">
+          <a class="nav-link" routerLink="/delete/:id">Delete Movie</a>
+        </li>
+        <li class="nav-item" *ngIf="authService.isAuthenticated()">
+          <a class="nav-link" (click)="logout()">Logout</a>
+        </li>
+        <li class="nav-item" *ngIf="!authService.isAuthenticated()">
+          <a class="nav-link" routerLink="/login">Login</a>
+        </li>
+        <li class="nav-item" *ngIf="!authService.isAuthenticated()">
+          <a class="nav-link" routerLink="/signup">Sign up</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  
+
+  <app-footer></app-footer>
+

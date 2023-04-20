@@ -1,0 +1,23 @@
+.navbar {
+    border-radius: 0;
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
+  
+  .navbar-toggler {
+    border: none;
+  }
+  
+  .nav-link {
+    font-size: 1.2rem;
+    padding: 1rem;
+    margin-right: 0.5rem;
+  }
+  
+  .nav-link:hover {
+    color: #fff;
+    background-color: #343a40;
+  }
+  

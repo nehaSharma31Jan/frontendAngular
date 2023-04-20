@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie ID Form</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+ 
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.5;
+      margin: 0;
+      padding: 0;
+    }
+
+    form {
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      margin: 20px auto;
+      max-width: 500px;
+      padding: 20px;
+     
+    }
+
+    form h2 {
+      color: #333;
+      text-align: center;
+    }
+
+    label {
+      color: #333;
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="submit"] {
+      border: none;
+      border-radius: 3px;
+      font-size: 16px;
+      padding: 10px;
+      width: 100%;
+    }
+
+    input[type="submit"] {
+      background-color: #333;
+      color: #fff;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #666;
+    }
+  </style>
+
+</head>
+<body>
+
+  <app-navbar></app-navbar>
+
+  <form [formGroup]="reactiveForm" (ngSubmit)="onsubmit()">
+    <h2>Movie ID Form</h2>
+
+    <label for="movieid">Movie Id</label>
+    <input type="text" id="movieid" name="movieid" placeholder="movieid .." formControlName="movieid">
+
+    <input type="submit" value="Submit">
+  </form>
+
+</body>
+</html>
